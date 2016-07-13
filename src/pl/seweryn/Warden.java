@@ -1,14 +1,16 @@
 package pl.seweryn;
 
 public class Warden implements Observer {
-
+	private double totalExpences;
+	
 	@Override
 	public void newOrder(Order order) {
 		Cargo cargo = order.getCargo();
-
-		System.out.println("WARDEN: Price " + cargo.getName() + " = " + cargo.getMonay() + " $");
-		System.out.println();
-
+		totalExpences += cargo.getMonay();	
+	}
+	
+	public void getRaport() {
+		System.out.println("WARDEN: Total  Expences until now: " + totalExpences + " $");
 	}
 
 }

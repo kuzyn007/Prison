@@ -24,12 +24,14 @@ public class Main {
 		storehouse.takeOrder(buyFoodA);
 		storehouse.takeOrder(buyCigarettesA);
 		storehouse.realizeOrders();
+		warden.getRaport();
 		
 		System.out.println("---- Second day: Orders are realized. ----");
 		storehouse.takeOrder(buyFoodS);
 		storehouse.takeOrder(buyFoodA);
 		storehouse.takeOrder(buyCigarettesA);
 		storehouse.realizeOrders();
+		warden.getRaport();
 	}
 
 }
